@@ -9,7 +9,6 @@ namespace cse210_02.Game
     {
         private List<int> deck = new List<int>();
         public int cardDrawn;
-        private int[] shuffledDeck;
         private int cardIndex = 0;
         
         public Deck()
@@ -23,15 +22,15 @@ namespace cse210_02.Game
             }
         }
         
-        public List<int> Shuffle()
+        public void Shuffle()
         {
             Random r = new Random();
-            return deck.OrderBy(x => r.Next()).ToList();  
+            deck = deck.OrderBy(x => r.Next()).ToList();  
         }
         
         public int Draw()
         {
-            cardDrawn = shuffledDeck[cardIndex];
+            cardDrawn = deck[cardIndex];
             cardIndex++;
             if (cardIndex == 52)
             {
