@@ -44,7 +44,6 @@ namespace cse210_02.Game
 
             if(_isPlaying)
             {
-                deck.Draw();
                 Console.WriteLine("Your card is: " + deck.cardDrawn);
                 Console.WriteLine("will the next card be higher or lower? (h/l)");
                 highLow = Console.ReadLine();
@@ -58,7 +57,9 @@ namespace cse210_02.Game
                 return;
             }
 
+
             int lastCard = deck.cardDrawn;
+            deck.Draw();
             int currentCard = deck.cardDrawn;
 
             if(highLow == "h")
