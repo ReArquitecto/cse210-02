@@ -29,6 +29,7 @@ namespace cse210_02.Game
             return deck.OrderBy(x => r.Next()).ToList();  
         }
         
+        /// draw a card
         public int Draw()
         {
             cardDrawn = shuffledDeck[cardIndex];
