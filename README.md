@@ -1,4 +1,4 @@
-# cse210-02
+# CSE210-02
 Repo for our CSE210 games
 
 contains a Deck class that stores a list of values between 1 and 13
